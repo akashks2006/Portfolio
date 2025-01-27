@@ -557,12 +557,14 @@ a{
 }
 .row{
     padding-top: 85px;
+    margin-right: 30px;
 }
 .sub-title-contact-me{
     color: white;
     font-family: "roboto-serif-semibold";
     font-size: 3.4rem;
     letter-spacing: 3.5px;
+    padding-top: 20px;
 }
 .contact-left{
     flex-basis: 25%;
@@ -570,7 +572,7 @@ a{
 
 }
 .contact-right{
-    flex-basis: 60%;
+    flex-basis: 65%;
 }
 .contact-left p{
     margin-top: 30px;
@@ -591,10 +593,43 @@ a{
 .social-icons a{
     text-decoration: none;
     margin-right: 20px;
-    transition: 0.1s;
+    transition: 0.2s;
 }
 .social-icons a:hover{
     scale: 110%;
     transform: translateY(-1px);
+
+}
+.btn-submit{
+    background: #2396C7;
+    display: block;
+    margin: 50px 5px;
+    width: fit-content;
+    box-shadow: 0 0px 6px #72B8FF;
+    border: none;
+    padding: 16px 50px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 600;
+    color: white;
+    font-size: 1.4rem;
+    letter-spacing: 2.2px;
+    transition: 0.3s;
+    
+}
+.contact-right form{
+    width: 80%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #2C2C2C;
+    padding: 15px;
+    margin: 18px 0;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 6px;
 
 }
