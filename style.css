@@ -1,0 +1,600 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+.merriweather-regular {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.roboto-serif-semibold {
+    font-family: "Roboto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100,
+      "GRAD" 0;
+}
+.roboto-serif-bold {
+    font-family: "Roboto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100,
+      "GRAD" 0;
+}
+.roboto-slab-semibold {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+
+body{
+    height: auto;
+    background: linear-gradient(to bottom,rgb(27, 21, 42), rgb(22, 34, 66));
+    overflow-x: hidden;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.navbar .logo{
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+    margin: 20px;
+    margin-left: 57px;
+    color: white;
+    font-size: 2.55rem;
+    letter-spacing: 2px;
+}
+.navbar .logo::first-letter{
+    color: #1BABE8;
+}
+.navbar ul{
+    display: flex;
+    
+    margin: 20px;
+    margin-right: 40px;
+}
+.navbar ul li{
+    list-style: none;
+    margin: 30px;
+}
+.navbar ul li a{
+    color: white;
+    font-size: 1.9rem;
+    font-family: "Merriweather-regular", serif;
+    letter-spacing: 1.5px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #1BABE8;
+    display: block;
+    margin: 0 auto;
+    margin-top: -4px;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.top-highlight {
+    position: absolute;
+    width: 300px; /* Adjust size as needed */
+    height: 300px;
+    top: 0%; /* Center vertically */
+    left: 98%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for perfect centering */
+    background: rgba(0, 202, 224,0.4); /* Soft white color */
+    border-radius: 50%; /* Makes it a circle */
+    filter: blur(100px); /* Creates the glowing effect */
+    z-index: -1; /* Ensure it's visible over the gradient */
+}
+.mid-highlight {
+    position: absolute;
+    width: 500px; /* Adjust size as needed */
+    height: 500px;
+    top: 55%; /* Center vertically */
+    left: 23%;
+    transform: translate(-50%, -50%); /* Adjust for perfect centering */
+    background: rgba(114, 184, 255,0.25); /* Soft white color */
+    border-radius: 50%; /* Makes it a circle */
+    filter: blur(100px); /* Creates the glowing effect */
+    z-index: -1; /* Ensure it's visible over the gradient */
+}
+
+
+
+
+/* Home Section */
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 100%;
+    color: white;
+    margin: 0 6%; /* Add left and right margin */
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.home .content {
+    flex: 1; /* Take up available space */
+    max-width: 50%; /* Limit the width of the text section */
+}
+
+.home h1 {
+    font-family: 'roboto-serif-semibold';
+    color: white;
+    letter-spacing: 2px;
+    font-size: 3.48rem;
+    margin-bottom: 53px;
+    z-index: 1;
+}
+
+.wave {
+    display: inline-block;
+    animation: wave 1.5s infinite;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+}
+.home p {
+    font-family: 'roboto-slab-regular';
+    font-size: 1.3rem;
+    letter-spacing: 1.2px;
+    text-align: left;
+    max-width: 520px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: white;
+    z-index: 1;
+}
+
+
+/* Buttons */
+.buttons {
+    display: flex;
+    margin-top: 50px;
+    gap: 50px;
+
+}
+.btn-download {
+    padding: 15px 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #31404e;
+    border: none;
+    margin-top: auto;
+    background: #00A4E9;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    box-shadow: 0 0 5px #72B8FF;
+}
+.btn-contact {
+    padding: 15px 35px;
+    font-family: 'roboto-slab-semibold';
+    letter-spacing: 1px;
+    color: #00A4E9;
+    border: none;
+    margin-top: auto;
+    background: none;
+    border: 2px solid #00A4E9;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    box-shadow: 0 0 5px #72B8FF;
+
+}
+.btn-download:hover {
+    box-shadow: 0 0 8px #72B8FF;
+    transform: translateY(-2px);
+}
+.btn-contact:hover {
+    box-shadow: 0 0 8px #72B8FF;
+    transform: translateY(-2px);
+}
+
+/*Profile Container*/
+.profile-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 433px;
+    min-height: 435px;
+
+}
+
+
+/* Glow Effect*/
+.glow-effect {
+    position: relative;
+    width: 430px;
+    height: 430px;
+    border-radius: 50%;
+    border: 4px solid #4dbbead3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+
+/* Profile Image */
+.profile-img {
+    width: 430px;
+    height: 430px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 30px #34B1E5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+
+/*-------------about me---------*/
+#about{
+    padding: 130px 0;
+    padding-bottom: 50px;
+    color: white;
+    margin: 0 3.5%; /* Add left and right margin */
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.about-col-1{
+    flex: 1;
+    display: flex;
+    flex-basis: 35%;
+
+}
+.about-photo-bg-highlight{
+    position:absolute;
+    width: 500px; /* Adjust size as needed */
+    height: 500px;
+    top: 160%; /* Center vertically */
+    left: 17%;
+    transform: translate(-50%, -50%); /* Adjust for perfect centering */
+    background: rgba(114, 184, 255,0.25); /* Soft white color */
+    border-radius: 50%; /* Makes it a circle */
+    filter: blur(200px); /* Creates the glowing effect */
+    z-index: -1; /* Ensure it's visible over the gradient */
+}
+.about-me-bg-highlight{
+    position:absolute;
+    width: 500px; /* Adjust size as needed */
+    height: 500px;
+    top: 160%;
+    left: 100%;
+    transform: translate(-50%, -50%); /* Adjust for perfect centering */
+    background: rgba(0, 202, 224,0.15); /* Soft white color */
+    border-radius: 50%; /* Makes it a circle */
+    filter: blur(100px); /* Creates the glowing effect */
+    z-index: -1; /* Ensure it's visible over the gradient */
+}
+
+.about-col-1 img{
+    padding-top: 50px;
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 500px;
+    max-height: 500px;
+
+}
+
+
+/* About Me Content */
+.about-col-2{
+    flex: 2;
+    flex-basis: 60%;
+    margin-left: 50px;
+}
+.sub-title{
+    font-family: 'roboto-serif-bold';
+    font-size: 3rem;
+    color: white;
+    letter-spacing: 3px;
+}
+.about-col-2 p{
+    font-family: 'roboto-serif-semibold';
+    font-size: 1.1rem;
+    letter-spacing: 1.2px;
+    line-height: 1.5;
+    margin-top: 30px;
+    width: 75%;
+    text-align: justify;
+
+}
+.skills-and-education{
+    display: flex;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-family: 'roboto-serif-semibold';
+    letter-spacing: 2.2px;
+    font-size: 28px;
+    font-weight: 500;
+    color: #C9C9C9;
+    cursor: pointer;
+    position: relative;
+    flex-basis: 20%;
+}
+.tab-links::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #1BABE8;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 43%;
+
+}
+
+
+
+
+.skills-container {
+    color: #fff;
+
+}
+
+.section {
+    margin-bottom: 40px;
+    width: 63%;
+    height: 100%;
+}
+
+.section h2 span{
+    display: inline-block;
+    font-family: "roboto-serif-semibold";
+    letter-spacing: 2.3px;
+    font-size: 1.5rem;
+}
+.section h2 span::first-letter{
+    color: #1BABE8;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 20px;
+    row-gap: 1.5rem;
+    column-gap: 2rem;
+}
+
+.skill-item {
+    border: 2.3px solid #00A4E9;
+    border-radius: 20px;
+    height: 50px;
+    width: 145px;
+    display: flex;
+    padding-left: 2px;
+    padding-right: 2px;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.skill-item-other{
+    border: 2.3px solid #00E980;
+}
+
+.skill-item img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.skill-item span {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-family: "roboto-serif-semibold";
+    font-weight: 600;
+}
+.raspberry-pi span{
+    font-size: 0.95rem;
+}
+
+/* ------------Services---------- */
+#portfolio{
+    padding: 10px 0;
+
+}
+.sub-title-projects{
+    color: white;
+    font-family: "roboto-serif-semibold";
+    font-size: 3rem;
+    text-align: center;
+}
+
+.project-list{
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically if needed */
+    gap: 80px;             /* Add spacing between items */
+    margin-top: 3%;
+    margin-bottom: 3%;
+    
+}
+.project-title {
+    width: 300px; /* Set the desired width */
+    height: 400px; /* Set the desired height */
+    border-radius: 15px; /* Add rounded corners */
+    overflow: hidden; /* Ensure the image doesn't overflow the div */
+    display: flex; /* Center content within each div */
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0px 6px rgba(86, 204, 255, 0.5); /* Add a subtle shadow */
+    background-color: #f0f0f0; /* Optional: Background color */
+    position: relative;
+    transition: 0.3s;
+
+}
+.project-title:hover{
+    box-shadow: 0 0px 10px rgba(71, 224, 255, 0.8);
+    /* transform: translate(-2px); */
+    transform: scale(101%);
+}
+.project-cover-image{
+    filter: blur(2px);
+}
+
+.layer{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+  
+.layer h3 {
+    margin: 16px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-family: "roboto-serif-semibold";
+    letter-spacing: 1px;
+    color: white;
+}
+  
+.layer p {
+    margin: 0 16px 16px;
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: justify;
+    font-family: "roboto-serif-semibold";
+    padding: 20px;
+    letter-spacing: 0.8px;
+}
+.layer a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* background: rgba(77, 166, 255, 0.416);
+    border-radius: 5px; */
+    padding: 3px;
+    padding-right: 5px;
+}
+.layer a img{
+    width: 30px;
+    margin-right: 5px;
+}
+.btn-see-more{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 2px solid #1BABE8;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: "roboto-serif-semibold";
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+    transition: 0.3s;
+}
+.btn-see-more:hover{
+    box-shadow: 0 0px 6px rgba(86, 204, 255, 0.5);
+    transform: translateY(-2px);
+    background: #3dc5ff73;
+}
+
+
+/* ------------Contact Me---------- */
+.container-contact{
+    background: #0e1425;
+}
+.row{
+    padding-top: 85px;
+}
+.sub-title-contact-me{
+    color: white;
+    font-family: "roboto-serif-semibold";
+    font-size: 3.4rem;
+    letter-spacing: 3.5px;
+}
+.contact-left{
+    flex-basis: 25%;
+    margin-left: 90px;
+
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "roboto-serif-semibold";
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;    
+}
+.social-icons{
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.social-icons a{
+    text-decoration: none;
+    margin-right: 20px;
+    transition: 0.1s;
+}
+.social-icons a:hover{
+    scale: 110%;
+    transform: translateY(-1px);
+
+}
