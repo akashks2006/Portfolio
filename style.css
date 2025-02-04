@@ -351,7 +351,7 @@ a{
 }
 
 .tab-links{
-    margin-right: 50px;
+    margin-right: 130px;
     font-family: 'roboto-serif-semibold';
     letter-spacing: 2.2px;
     font-size: 28px;
@@ -359,20 +359,22 @@ a{
     color: #C9C9C9;
     cursor: pointer;
     position: relative;
-    flex-basis: 20%;
+    flex-basis: 0%;
+    display: flex;
+    
 }
 .tab-links::after{
     content: '';
-    width: 0%;
+    width: 100%;
     height: 2px;
     background-color: #1BABE8;
     position: absolute;
-    left: 0;
-    bottom: -2px;
+    align-content: center;
     transition: 0.5s;
 }
 .tab-links.active-link::after{
-    width: 43%;
+    width: 100%;
+    
 
 }
 
@@ -381,7 +383,12 @@ a{
 
 .skills-container {
     color: #fff;
-
+}
+.education-container{
+    display: none;
+}
+.skills-container.active-tab{
+    display: block;
 }
 
 .section {
@@ -632,4 +639,18 @@ form input, form textarea{
     font-size: 18px;
     border-radius: 6px;
 
+}
+form .btn-submit{
+    padding: 14px 50px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background: #2C2C2C;
+    color: white;
+    letter-spacing: 1.2px;
 }
