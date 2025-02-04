@@ -356,7 +356,7 @@ a{
     letter-spacing: 2.2px;
     font-size: 28px;
     font-weight: 500;
-    color: #C9C9C9;
+    color: #b9b9b9;
     cursor: pointer;
     position: relative;
     flex-basis: 0%;
@@ -365,17 +365,23 @@ a{
 }
 .tab-links::after{
     content: '';
-    width: 100%;
-    height: 2px;
+    width: 0%;
+    height: 1.3px;
     background-color: #1BABE8;
-    position: absolute;
     align-content: center;
+    bottom: -3px;
+    position: absolute;
+
     transition: 0.5s;
 }
 .tab-links.active-link::after{
     width: 100%;
+    color: #00A4E9;
     
-
+}
+.active-link{
+    transition: 0.3s;
+    color: #00a4e9;
 }
 
 
@@ -386,10 +392,30 @@ a{
 }
 .education-container{
     display: none;
+    line-height: 2rem;
+    
 }
+.education-container li{
+    margin-bottom: 15px;
+    font-family: 'roboto-serif-semibold';
+    letter-spacing: 2.3px;
+    font-size: 1.05rem;
+}
+
+/* Education Year */
+.education-container span{
+    font-family: 'roboto-serif-semibold';
+    letter-spacing: 2.3px;
+    font-size: 1.2rem;
+    color: #4fcaff;
+}
+
+
+
 .skills-container.active-tab{
     display: block;
 }
+
 
 .section {
     margin-bottom: 40px;
@@ -450,6 +476,7 @@ a{
 
 /* ------------Services---------- */
 #portfolio{
+    position: relative;
     padding: 10px 0;
 
 }
