@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: "Poppins", sans-serif;
+    font-family: 'roboto-serif-semibold';
 }
 .merriweather-regular {
     font-family: "Merriweather", serif;
@@ -103,7 +103,7 @@ a{
     top: 0%; /* Center vertically */
     left: 98%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Adjust for perfect centering */
-    background: rgba(0, 202, 224,0.4); /* Soft white color */
+    background: rgba(114, 184, 255,0.3); /* Soft white color */
     border-radius: 50%; /* Makes it a circle */
     filter: blur(100px); /* Creates the glowing effect */
     z-index: -1; /* Ensure it's visible over the gradient */
@@ -351,7 +351,7 @@ a{
 }
 
 .tab-links{
-    margin-right: 130px;
+    margin-right: 100px;
     font-family: 'roboto-serif-semibold';
     letter-spacing: 2.2px;
     font-size: 28px;
@@ -359,7 +359,6 @@ a{
     color: #b9b9b9;
     cursor: pointer;
     position: relative;
-    flex-basis: 0%;
     display: flex;
     
 }
@@ -385,15 +384,14 @@ a{
 }
 
 
-
-
+/* Education Section */
 .skills-container {
     color: #fff;
 }
 .education-container{
     display: none;
     line-height: 2rem;
-    
+    margin-bottom: 135px;
 }
 .education-container li{
     margin-bottom: 15px;
@@ -410,11 +408,39 @@ a{
     color: #4fcaff;
 }
 
-
-
-.skills-container.active-tab{
-    display: block;
+/* Experience Section */
+.experience-container{
+    color: white;
 }
+.experience-container{
+    display: none;
+    line-height: 2rem;
+    margin-bottom: 135px;
+    margin-top: 30px;
+}
+.experience-container li{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-family: 'roboto-serif-semibold';
+    letter-spacing: 2.3px;
+    font-size: 1.05rem;
+    max-width: 70%;
+}
+
+/* Technical Support Assistant */
+.experience-container h3{
+    letter-spacing: 1.3px;
+    font-family: monospace;
+    font-size: 1.5rem;
+    color: #29ace4;
+}
+.experience-container h4{
+    letter-spacing: 1.3px;
+    font-family: monospace;
+    font-size: 1rem;
+    color: #7dcfb6;
+}
+
 
 
 .section {
@@ -474,7 +500,7 @@ a{
     font-size: 0.95rem;
 }
 
-/* ------------Services---------- */
+/* ------------My Projects---------- */
 #portfolio{
     position: relative;
     padding: 10px 0;
@@ -681,3 +707,63 @@ form .btn-submit{
     color: white;
     letter-spacing: 1.2px;
 }
+
+
+
+
+.skills-carousel-container {
+    position: relative;
+    width: 525px;
+    
+    display: flex;
+    align-items: center;
+  }
+  
+  .carousel-btn {
+    position: absolute;
+    top: 62%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s;
+  }
+  
+  .carousel-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .prev-btn {
+    left: -60px;
+  }
+  
+  .next-btn {
+    right: -55px;
+  }
+  
+  .carousel-btn svg {
+    color: white;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    max-width: 900px;
+  }
+  
+  .carousel-slide {
+    flex: 0 0 100%;
+  }
+  
+  .skills-container {
+    overflow: hidden;
+    width: 100%;
+  }
